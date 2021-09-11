@@ -61,7 +61,7 @@ jobs:
       uses: swinton/screenshot-website@v1.x
       with:
         width: 1920
-        source: https://tanke-hannover.de
+        source: https://www.tanke-hannover.de/
         destination: screenshot.png
         full-page: true
         delay: 350
