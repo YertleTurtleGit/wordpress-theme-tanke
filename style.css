@@ -1,0 +1,622 @@
+/*
+Theme Name: TANKE Theme
+Description: TANKE Theme
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: wordpress-theme-tanke
+*/
+
+:root {
+   --colorA: #2e45a2;
+   --colorB: white;
+   --colorC: pink;
+   --max-rows-width: 1260px;
+   --max-single-row-width: 420px;
+}
+
+html {
+   scroll-behavior: smooth;
+}
+
+body {
+   font-family: sans-serif;
+   margin: 0;
+   padding: 0;
+   border: 0;
+   background-color: var(--colorA);
+   color: var(--colorB);
+   padding-bottom: 100px !important;
+}
+
+body * {
+   z-index: 0;
+}
+
+#index-all {
+   max-width: var(--max-rows-width);
+}
+
+#render-area {
+   opacity: 0;
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 150vh;
+   overflow: hidden;
+}
+
+table {
+   background-color: var(--colorA);
+}
+
+table * {
+   text-align: justify;
+   font-weight: normal;
+}
+
+table * .second-column {
+   padding-left: 15px !important;
+}
+
+h1 {
+   -webkit-text-fill-color: var(--colorA);
+   -webkit-text-stroke-width: 2.2px;
+   -webkit-text-stroke-color: var(--colorB);
+   font-size: 115px !important;
+   letter-spacing: 15px;
+   text-transform: uppercase;
+   word-break: break-all;
+}
+
+#intro p,
+h4 {
+   text-align: left;
+   -webkit-text-fill-color: var(--colorA);
+   -webkit-text-stroke-color: var(--colorB);
+   font-size: 44.8px !important;
+   -webkit-text-stroke-width: 2px;
+   letter-spacing: 16px;
+   text-transform: uppercase;
+   word-break: break-all;
+   background-color: var(--colorA);
+}
+
+#intro p {
+   font-weight: 600;
+   font-size: 35px !important;
+   -webkit-text-stroke-width: 1.5px;
+   letter-spacing: 10px;
+}
+
+#intro {
+   max-width: 1000px;
+}
+
+p {
+   text-align: justify;
+   background-color: var(--colorA);
+   hyphens: auto;
+   -webkit-hyphens: auto;
+   -moz-hyphens: auto;
+   font-size: 12pt;
+}
+
+a {
+   color: var(--colorC);
+   -webkit-text-stroke-color: var(--colorC);
+   text-decoration: none;
+}
+
+span {
+   background-color: var(--colorA);
+}
+
+#impressum {
+   z-index: 9999999;
+   background-color: var(--colorA);
+   font-size: 9pt;
+   position: fixed;
+   right: 0;
+   bottom: 0;
+}
+
+#impressum a {
+   color: var(--colorB);
+   text-decoration: none;
+}
+
+.widget {
+   list-style: none;
+}
+
+.tanke:before {
+   -webkit-text-fill-color: var(--colorA);
+   -webkit-text-stroke-width: 0.6px;
+   -webkit-text-stroke-color: var(--colorB);
+   letter-spacing: 3px;
+   font-size: 13pt;
+   text-transform: uppercase;
+   word-break: break-all;
+   background-color: var(--colorA);
+   color: var(--colorB);
+   text-transform: uppercase;
+   content: "Tanke";
+   word-break: keep-all !important;
+}
+
+#header {
+   overflow: hidden;
+   min-height: 66vh;
+   z-index: 0;
+}
+
+#header h1 {
+   z-index: 1;
+}
+
+#header-logo {
+   z-index: 0;
+   overflow: hidden;
+   position: fixed;
+   height: 100%;
+   width: 100%;
+   top: 0;
+   left: 0;
+   margin: 0;
+   line-height: 0vh;
+   -webkit-text-stroke-width: 0.2rem;
+   /*-webkit-text-fill-color: transparent !important;*/
+   letter-spacing: 1vw;
+   font-size: 10vw;
+   text-align: center !important;
+}
+
+#scroll-arrow {
+   position: absolute;
+   top: 50vh;
+   left: 0;
+   width: 100%;
+   text-align: center;
+   font-size: 5vh;
+   z-index: 50;
+}
+
+#content-rows {
+   z-index: 20;
+   width: 100%;
+   height: 100%;
+   display: grid;
+   padding-bottom: 150px;
+   grid-template-columns: 33.33333% 33.33333% 33.33333%;
+   grid-template-rows: auto auto;
+   grid-template-areas: ". intro intro" "row-a . row-b" ". row-c .";
+}
+
+#content-rows > * {
+   z-index: 20;
+}
+
+.content-row {
+   max-width: var(--max-single-row-width) !important;
+}
+
+.content-single *,
+.content-row * {
+   padding-left: 0 !important;
+   padding-right: 0 !important;
+   margin-left: 0 !important;
+   margin-right: 0 !important;
+}
+
+.content-single,
+.content-row {
+   padding-left: 10px;
+   padding-right: 10px;
+   max-width: 100%;
+   overflow: hidden;
+   z-index: 30;
+}
+
+.content-single img,
+.content-row img {
+   max-width: 100%;
+   height: auto;
+   border: 0 !important;
+   background: none !important;
+   border-radius: 0 !important;
+}
+
+.content-single {
+   width: 33.33333%;
+   margin-left: 33.33333%;
+}
+
+.content-single > * {
+   background-color: var(--colorA);
+}
+
+.content-single ul,
+.content-row ul {
+   list-style-type: none;
+   padding: 0;
+}
+
+#row-a {
+   grid-area: row-a;
+}
+
+#row-b {
+   grid-area: row-b;
+}
+
+#row-c {
+   grid-area: row-c;
+}
+
+#intro {
+   grid-area: intro;
+}
+
+.entry {
+   max-width: 750px;
+   margin-left: 15vw;
+   margin-right: 10px;
+}
+
+.entry p,
+.entry h2,
+.entry h3 {
+   max-width: 350px;
+}
+
+.wp-block-image {
+   margin-left: 0 !important;
+   margin-right: 0 !important;
+}
+
+#kulturbuero {
+   display: none;
+   width: 200px;
+   margin: 10px;
+   margin-top: 50px;
+   max-width: 15vw;
+}
+
+#team-names {
+   position: absolute;
+   top: 0;
+   left: 0;
+   color: var(--colorA);
+   font-size: 2.6vw;
+   text-transform: uppercase;
+   text-align: justify;
+   -webkit-text-fill-color: transparent;
+   -webkit-text-stroke-width: 0.175vw;
+   -webkit-text-stroke-color: var(--colorA);
+   background-color: transparent;
+}
+
+.force-left-align * {
+   text-align: left !important;
+}
+
+.event-image img {
+   width: auto;
+   height: auto;
+}
+
+.wp-block-file__button {
+   background-color: var(--colorC) !important;
+   color: var(--colorA) !important;
+   border-radius: 0 !important;
+   padding: 0.1em 0.2em !important;
+}
+
+.veranstaltungsliste {
+   list-style-type: none;
+   list-style: none;
+}
+
+.veranstaltungsliste h4 {
+   margin-bottom: auto;
+}
+
+.wp-block-image figcaption {
+   font-size: small;
+}
+
+.ecs-event-list {
+   list-style: none;
+}
+
+@media (min-width: 1500px) {
+   h1 {
+      font-size: 115px !important;
+      -webkit-text-stroke-width: 2.6px;
+      letter-spacing: 20px;
+   }
+   #team-names {
+      font-size: 42px;
+      -webkit-text-stroke-width: 2.5px;
+   }
+}
+
+@keyframes fade-in {
+   0% {
+      opacity: 0;
+   }
+   100% {
+      opacity: 1;
+   }
+}
+
+@media (max-width: 1000px) {
+   h1 {
+      font-size: 90px !important;
+      -webkit-text-stroke-width: 2.2px;
+      letter-spacing: 15px;
+   }
+   .entry {
+      margin-left: 10px;
+   }
+   #content-rows {
+      grid-template-columns: 50% 50%;
+      grid-template-rows: auto auto auto;
+      grid-template-areas: "intro intro" "row-a ." ". row-b" "row-c .";
+   }
+   #kulturbuero {
+      max-width: 200px;
+   }
+   #team-names {
+      font-size: 4.1vw;
+      -webkit-text-stroke-width: 0.24vw;
+   }
+   #header-logo {
+      letter-spacing: 2rem;
+      font-size: 16rem;
+   }
+}
+
+@media (max-width: 550px) {
+   h1 {
+      font-size: 50px !important;
+      -webkit-text-stroke-width: 1.5px;
+      letter-spacing: 10px;
+   }
+   #content-rows {
+      grid-template-columns: 100%;
+      grid-template-rows: auto auto auto;
+      grid-template-areas: "intro" "row-a" "row-b" "row-c";
+   }
+}
+
+/*input,
+select {
+   border: 1px solid var(--colorB);
+   color: var(--colorB);
+   background-color: var(--colorA);
+   height: 27px;
+   padding: 5px;
+}*/
+
+input,
+select,
+.pbSubmit,
+.wp-block-button__link {
+   margin: 0;
+   border: 1px solid white;
+   color: white;
+   background-color: var(--colorA);
+   border-radius: 0px;
+   padding: 10px !important;
+   transition: all 0.5s !important;
+   margin-top: 15px;
+}
+
+button:hover,
+.pbSubmit:hover,
+.wp-block-button__link:hover {
+   border-radius: 10px;
+   background-color: var(--colorB);
+   color: var(--colorA);
+   cursor: pointer;
+}
+
+/* BEGIN: css for plugin override */
+
+.ahbfield_service,
+.fieldCalendarfieldname1_1,
+.fieldCalendarfieldname1_2 {
+   display: none !important;
+}
+
+.slots {
+   box-shadow: none !important;
+   -webkit-box-shadow: none !important;
+   -moz-box-shadow: none !important;
+   border: none !important;
+}
+
+.availableslot {
+   border-color: var(--colorB) !important;
+}
+
+.availableslot a {
+   color: var(--colorB) !important;
+   background-color: var(--colorA) !important;
+}
+
+.availableslot a:hover {
+   color: var(--colorA) !important;
+   background-color: var(--colorB) !important;
+}
+
+.pbSubmit,
+.wp-block-button__link {
+   color: var(--colorB) !important;
+   background-color: var(--colorA) !important;
+}
+
+.pbSubmit:hover,
+.wp-block-button__link:hover {
+   color: var(--colorA) !important;
+   background-color: var(--colorB) !important;
+}
+
+.cpefb_error {
+   z-index: 50 !important;
+   background-color: var(--colorA) !important;
+   color: white !important;
+   border-color: var(--colorB) !important;
+   left: 200px !important;
+}
+
+.cpefb_error::after {
+   background: none !important;
+}
+
+.tribe-events-list-widget,
+.tribe-list-widget,
+.tribe-events-list-widget-events {
+   width: 250px !important;
+   padding: 0 !important;
+   margin: 0 !important;
+}
+
+.tribe-events-list-widget-events {
+   padding-bottom: 25px !important;
+}
+
+.tribe-events-schedule,
+.tribe-clearfix,
+.tribe-events-sub-nav li a {
+   color: var(--colorC) !important;
+   border: none !important;
+   background: none !important;
+   word-break: break-word;
+}
+
+.tribe-events-cal-links,
+.tribe-events-back,
+.tribe-events-event-meta,
+.tribe-events-widget-link {
+   display: none !important;
+}
+
+.tribe-events-single-event-title {
+   color: var(--colorB) !important;
+}
+
+.tribe-block__events-link {
+   display: none !important;
+}
+
+.tribe-events-notices {
+   color: var(--colorA) !important;
+   text-shadow: none !important;
+   background: var(--colorB) !important;
+   text-transform: uppercase !important;
+   border-radius: 0px !important;
+}
+
+.tribe-events-schedule__separator--time {
+   color: inherit !important;
+   font-weight: inherit !important;
+   font-size: inherit !important;
+}
+
+.ol-attribution li {
+   font-size: 5pt;
+   color: black !important;
+}
+
+.es_subscription_message {
+   color: white !important;
+}
+
+.es_subscription_form_submit,
+.es_submit_button,
+.es_textbox_button,
+.ig_es_submit,
+.ig_es_form_field_email {
+   margin: 0 !important;
+   border: 1px solid white !important;
+   color: white !important;
+   background-color: var(--colorA) !important;
+   border-radius: 0px !important;
+   padding: 10px !important;
+   transition: all 0.5s !important;
+   margin-top: 15px !important;
+}
+
+.es_subscription_form_submit,
+.es_submit_button,
+.es_textbox_button,
+.ig_es_submit {
+   margin-bottom: 50px !important;
+}
+
+.es_subscription_form_submit:hover,
+.es_submit_button:hover,
+.es_textbox_button:hover,
+.ig_es_submit:hover {
+   border-radius: 10px !important;
+   background-color: var(--colorB) !important;
+   color: var(--colorA) !important;
+   cursor: pointer !important;
+}
+
+.es_subscription_form_submit:focus,
+.es_submit_button:focus,
+.es_textbox_button:focus,
+.ig_es_submit:focus {
+   opacity: 0;
+}
+
+.es_subscription_message {
+   color: var(--colorC) !important;
+}
+
+.es_spinner_image {
+   float: left !important;
+   color: var(--colorC);
+}
+
+.es_spinner_image img {
+   display: none !important;
+}
+
+/* Email(un-)subscriptionpage */
+.bg-indigo-600,
+.bg-gray-200 {
+   background-color: var(--colorA) !important;
+   color: var(--colorB) !important;
+   height: auto !important;
+   box-shadow: none !important;
+}
+
+/* Email(un-)subscriptionpage */
+.text-lg {
+   -webkit-text-fill-color: var(--colorA) !important;
+   -webkit-text-stroke-width: 1pt !important;
+   -webkit-text-stroke-color: var(--colorB) !important;
+   letter-spacing: 3pt !important;
+   line-height: 27pt;
+   font-size: 20pt !important;
+   text-transform: uppercase !important;
+   word-break: break-all !important;
+   background-color: var(--colorA) !important;
+}
+
+.tribe-events-schedule__datetime > * {
+   color: var(--colorB) !important;
+}
+
+/* Email(un-)subscriptionpage */
+.text-base {
+   display: none !important;
+}
+
+/* END: css for plugin override */
