@@ -64,7 +64,7 @@ jobs:
         source: https://www.tanke-hannover.de/
         destination: screenshot.png
         full-page: true
-        delay: 350
+        delay: 60
           
     - uses: actions/download-artifact@v2
       with:
