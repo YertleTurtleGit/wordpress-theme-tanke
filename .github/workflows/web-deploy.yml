@@ -31,11 +31,6 @@ jobs:
     - name: Remove File
       uses: JesseTG/rm@v1.0.0
       with:
-        path: screenshot.png
-        
-    - name: Remove File
-      uses: JesseTG/rm@v1.0.0
-      with:
         path: .eslintrc.js
         
     - name: Remove File
