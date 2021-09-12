@@ -61,10 +61,9 @@ jobs:
       uses: swinton/screenshot-website@v1.x
       with:
         width: 1200
-        height: 900
         source: https://www.tanke-hannover.de/
         destination: screenshot.png
-        # full-page: true
+        full-page: false
           
     - uses: actions/download-artifact@v2
       with:
