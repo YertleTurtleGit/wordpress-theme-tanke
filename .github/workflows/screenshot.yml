@@ -1,0 +1,37 @@
+name: capture Screenshots
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+        with:
+           ref: main
+
+      - name: Screenshot Website
+        uses: swinton/screenshot-website@v1.x
+        with:
+          width: 1200
+          source: https://tanke-hannover.de
+          destination: screenshot.png
+          full-page: true
+
+      - uses: actions/download-artifact@v2
+        with:
+          name: screenshot
+
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: update screenshot
+          branch: main
+          file_pattern: screenshot*.png
+        
+      - name: Clean
+        uses: GeekyEggo/delete-artifact@v1.0.0
+        with:
+          name: screenshot
